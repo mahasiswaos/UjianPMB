@@ -1,0 +1,17 @@
+
+<?php $__env->startSection('content'); ?>
+<?php if (Session::has('message')): ?>
+	<div class="alert alert-success alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <?php echo Session::get('message'); ?>
+        </div>
+        
+<?php endif; ?>
+<div class="jumbotron">
+    <h2>Selamata Datang!</h2>
+    <div class="">
+        Di halaman Administrator Kegiatan Mahasiswa 
+    </div>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.bootstrap3.index', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

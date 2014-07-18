@@ -1,0 +1,36 @@
+
+<?php $__env->startSection('content'); ?>
+<div class="col-sm-15">
+    <div class="panel panel-info">
+        <div class="panel-heading"><i class="glyphicon glyphicon-plus"></i> Form Edit Soal</div>
+        <div class="panel-body">
+            <form class="form-horizontal" action="<?php echo URL::to("/soal/proses_edit/".$isi->id); ?>" method="post">
+                <div class="form-group">
+                    <label  class="col-sm-3 control-label">ID</label>
+                    <div class="col-sm-4">
+                        <input type="text" name="id" class="form-control" placeholder="id" value="<?php echo $isi->id?>"/>
+                        <p style="color: red"> <?php echo $errors->first('id'); ?> </p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Nama</label>
+                    <div class="col-sm-4">
+                        <input type="text" name="bid_study" class="form-control " placeholder="Bidang Study" value="<?php echo $isi->bid_study?>"> 
+                        <p style="color: red"> <?php echo $errors->first('bid_study'); ?> </p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-10" class="btn-group">
+                        <button type="submit" class="btn btn-info"><i class="glyphicon glyphicon-saved"></i> Save</button>
+                        <a href="<?php echo URL::to('/soal/view/'); ?>" class="btn btn-warning">
+                            <span class="glyphicon glyphicon-refresh"></span>
+                            Cancel
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.bootstrapsoal.index', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <?php echo $__env->make('layout.bootstrapcamaba.head', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    </head>
+    <body>
+      
+        <?php echo $__env->make('layout.bootstrapcamaba.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+     
+        <?php echo $__env->make('layout.bootstrapcamaba.nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <div class="container">
+            <?php echo $__env->yieldContent('content'); ?>
+        </div>
+        <?php echo $__env->make('layout.bootstrapcamaba.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    </body>
+</html>
+

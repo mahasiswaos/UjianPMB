@@ -1,0 +1,8 @@
+<?php
+foreach ($test as $data){
+    echo $data->id;
+    echo $data->nama;
+    echo $data->tanggal_lahir;
+}
+
+?>
